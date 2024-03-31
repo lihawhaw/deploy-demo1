@@ -1,12 +1,12 @@
 module.exports = {
   apps: [
     {
-      name: 'auto-deploy-server',
+      name: 'deploy',
       script: 'dist/main.js',
       interpreter: 'node',
       watch: false,
-      error_log: 'logs/auto-deploy-server.err.log',
-      out_log: 'logs/auto-deploy-server.out.log',
+      error_log: 'logs/deploy.err.log',
+      out_log: 'logs/deploy.out.log',
       merge_logs: true,
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
       max_memory_restart: '256M',
@@ -17,7 +17,7 @@ module.exports = {
       instances: 'max',
     },
     {
-      name: 'auto-deploy-server-worker',
+      name: 'deploy-worker',
       script: 'dist/main.js',
       interpreter: 'node',
       env: {
