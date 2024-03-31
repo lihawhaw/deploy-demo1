@@ -4,7 +4,6 @@ import { port } from '../adp.config.js'
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  console.log('app-port', port);
-  await app.listen(7777);
+  await app.listen(port);
 }
 bootstrap();
