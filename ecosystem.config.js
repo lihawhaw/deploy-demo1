@@ -13,18 +13,8 @@ module.exports = {
       min_uptime: '5s',
       max_restarts: 3,
       restart_delay: 2000,
-      exec_mode: 'cluster',
-      instances: 'max',
-    },
-    {
-      name: 'deploy-worker',
-      script: 'dist/main.js',
-      interpreter: 'node',
-      env: {
-        NODE_ENV: 'production',
-      },
-      exec_mode: 'fork',
       instances: 1,
+      exec_mode: 'fork'
     },
   ],
 };
