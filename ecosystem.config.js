@@ -1,12 +1,12 @@
 module.exports = {
   apps: [
     {
-      name: 'deploy',
+      name: 'deploy-demo1',
       script: 'dist/main.js',
       interpreter: 'node',
       watch: false,
-      error_log: 'logs/deploy.err.log',
-      out_log: 'logs/deploy.out.log',
+      error_log: 'logs/deploy-demo1.err.log',
+      out_log: 'logs/deploy-demo1.out.log',
       merge_logs: true,
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
       max_memory_restart: '256M',
